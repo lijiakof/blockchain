@@ -1,12 +1,12 @@
-# Ethereum Development Environment
+# 以太坊区块链开发环境搭建
 
-## Ethereum client download & installation
+## 以太坊客户端的下载和安装
 * https://github.com/ethereum/go-ethereum
 * [install homebrew](https://brew.sh/)
 * brew tap ethereum/ethereum
 * brew install ethereum
 
-## `geth` Usage
+## `geth` 命令的使用
 * geth -h
 * geth account list
 * geth console 2>>log
