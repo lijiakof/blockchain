@@ -1,4 +1,4 @@
-# 以太坊区块链开发环境搭建
+# 以太坊区块链环境搭建
 
 ## 以太坊客户端的下载和安装
 * https://github.com/ethereum/go-ethereum
