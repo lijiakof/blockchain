@@ -82,9 +82,9 @@ contract MetaCoin {
 		// msg.sender 为全局变量，表示：消息的发送方，即当前调用
 		if (balances[msg.sender] < amount) return false;
 		
-        // 给“消息的发送方”的以太币减去“转账总额”
+        // 给“消息的发送方”的以太币余额减去“转账总额”
 		balances[msg.sender] -= amount;
-		// 给“接收方”的以太币增加“转账总额”
+		// 给“接收方”的以太币余额增加“转账总额”
 		balances[receiver] += amount;
 		// 执行转账事件
 		Transfer(msg.sender, receiver, amount);
@@ -101,7 +101,7 @@ contract MetaCoin {
 
 	// 定义公共方法 getBalance，返回 unit 类型
 	function getBalance(address addr) public view returns(uint) {
-		// 通过钱包地址返回以太币数量
+		// 通过钱包地址获取以太币余额
 		return balances[addr];
 	}
 }
