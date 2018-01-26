@@ -108,7 +108,7 @@ contract MetaCoin {
 
 ```
 
-## 通过 web3 验证一下结构
+## 通过 web3 验证一下结果
 
 
 ## 用 go-ethereum 来实现
