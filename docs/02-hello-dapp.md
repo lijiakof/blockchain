@@ -82,7 +82,7 @@ contract MetaCoin {
 		// msg.sender 为全局变量，表示：消息的发送方，即当前调用
 		if (balances[msg.sender] < amount) return false;
 		
-        // 给“消息的发送方”的以太币余额减去“转账总额”
+		// 给“消息的发送方”的以太币余额减去“转账总额”
 		balances[msg.sender] -= amount;
 		// 给“接收方”的以太币余额增加“转账总额”
 		balances[receiver] += amount;
@@ -112,7 +112,6 @@ contract MetaCoin {
 
 ```
 ```
-
 
 ## 用 go-ethereum 来实现
 
