@@ -119,7 +119,7 @@ contract MetaCoin {
 
 ### 问题：
 * tx.origin 和 msg.sender 的区别？
-* 
+* 合约部署到哪儿了？具体以什么形式存在？
 
 ## 通过 web3 操作智能合约
 
