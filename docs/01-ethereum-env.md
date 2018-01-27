@@ -53,10 +53,13 @@
     * geth --identity "linoy" --rpc --rpcaddr "localhost" --rpccorsdomain "*" --datadir "./daibi" --port "30303" --nodiscover --rpcapi "personal,db,eth,net,web3,miner" --networkid 1999 console 2>>geth.log
 * 创建用户：`personal.newAccount("123")`
 * 启动挖矿：`miner.start(1)`
+* 打开另外一个命令行窗口，监视区块链日志：`tail -f geth.log`
+
+**注：在日志 `geth.log` 中查看到 `Generating DAG in progress epoch=0 percentage=99 elapsed=3m4.183s` 的进度到达 100% 时，挖矿会开始正式开启，此时你的第 0 个账户才会开始有余额**
 
 ### `genesis.json` 配置字段解释：
 * mixhash：与 nonce 配合用于挖矿，由上一个区块的一部分生成的 hash；
-* nonce: nonce 就是一个64位随机数，用于挖矿。
+* nonce: nonce 就是一个64位随机数，用于挖矿；
 * difficulty: 设置当前区块的难度，如果难度过大，cpu 挖矿就很难，这里设置较小难度；
 * alloc: 用来预置账号以及账号的以太币数量，因为私有链挖矿比较容易，所以我们不需要预置有币的账号，需要的时候自己创建即可以；
 * coinbase: 矿工的账号；
