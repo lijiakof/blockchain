@@ -62,7 +62,7 @@ import "./ConvertLib.sol";
 contract MetaCoin {
 	// 定义 mapping 类型的变量 balances
 	// key：address 地址类型：以太坊地址的长度，大小20个字节，160位
- 	// value：unit 货币单位类型：一个字面量的数字，可以使用后缀 wei, finney, szabo 或 ether 来在不同面额中转换。不含任何后缀的默认单位是 wei
+ 	// value：uint 货币单位类型：一个字面量的数字，可以使用后缀 wei, finney, szabo 或 ether 来在不同面额中转换。不含任何后缀的默认单位是 wei
 	mapping (address => uint) balances;
 
 	// 定义事件 Transfer
@@ -100,7 +100,7 @@ contract MetaCoin {
 
 	// 定义公共方法 getBalanceInEth
 	// 入参：钱包地址
-	// 返回： unit 类型
+	// 返回： uint 类型
 	function getBalanceInEth(address addr) public view returns(uint){
 		// 调用 ConvertLib 对以太币进行转化
 		return ConvertLib.convert(getBalance(addr),2);
@@ -108,7 +108,7 @@ contract MetaCoin {
 
 	// 定义公共方法 getBalance
 	// 入参：钱包地址
-	// 返回 unit 类型
+	// 返回 uint 类型
 	function getBalance(address addr) public view returns(uint) {
 		// 通过钱包地址获取以太币余额
 		return balances[addr];
@@ -117,12 +117,21 @@ contract MetaCoin {
 
 ```
 
-## 通过 web3 验证一下结果
+### 问题：
+* tx.origin 和 msg.sender 的区别？
+* 
+
+## 通过 web3 操作智能合约
 
 ```
+eth.getTransaction('0x9bee5005d368a044a9f77ca1722bb456fabd02357a101d387b484efe5571d8e4')
 ```
 
 ## 用 go-ethereum 来实现
+
+```
+
+```
 
 
 

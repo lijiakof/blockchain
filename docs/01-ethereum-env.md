@@ -12,6 +12,7 @@
 * geth console 2>>log
 * geth --dev console 2>>log
 * geth --datadir './demo' console 2>>log
+* geth attach http://10.5.11.56:8545
 
 ## web3
 * eth.accounts
@@ -23,3 +24,4 @@
 * eth.sendTransaction({from: '', to: '', value: web3.toWei(4, 'ether')})
 * miner.stop()
 * miner.start()
+* web3.eth.getCompilers()
