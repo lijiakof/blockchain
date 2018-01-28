@@ -138,7 +138,7 @@ abi = [{ constant: false, inputs: { name: 'a', type: 'uint256' } }]
 MyContract = eth.contract(abi)
 myContract = MyContract.new({from : address, data: contract.code})
 
-txpool.status
+txpool.status 
 eth.getBlock('pending', true).transactions
 
 Test = eth.contract(contract.info.abiDefinition)
