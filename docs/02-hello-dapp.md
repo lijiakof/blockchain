@@ -10,6 +10,8 @@
 ## 安装 truffle 环境
 * npm install -g truffle
 * npm install -g ethereumjs-testrpc
+	* // npm install -g solc
+	* // npm install -g web3
 
 ## 初始化项目
 * truffle unbox metacoin
@@ -130,6 +132,19 @@ eth.getTransaction('0x9bee5005d368a044a9f77ca1722bb456fabd02357a101d387b484efe55
 ## 用 go-ethereum 来实现
 
 ```
+source = 'contract test { function hello(uint a) returns(uint d) { return a + 1;} }'
+contract = eth.compile.solidity(source).test
+abi = [{ constant: false, inputs: { name: 'a', type: 'uint256' } }]
+MyContract = eth.contract(abi)
+myContract = MyContract.new({from : address, data: contract.code})
+
+txpool.status
+eth.getBlock('pending', true).transactions
+
+Test = eth.contract(contract.info.abiDefinition)
+myTest = Test.at(myContract.address)
+myTest.hello.call(3)
+
 
 ```
 

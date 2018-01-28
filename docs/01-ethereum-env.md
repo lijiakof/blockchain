@@ -17,14 +17,17 @@
 ## web3
 * eth.accounts
 * eth.blockNumber
-* personal.newAccount('123')
-* eth.getBalance('0xe65dab2c272a87dd516bd67cc6f76dbc04bccba9')
-* personal.unlockAccount('0xe65dab2c272a87dd516bd67cc6f76dbc04bccba9', '123')
+* personal.newAccount(password)
+* eth.getBalance(accountAddress)
+* personal.unlockAccount(accountAddress, password)
 * todo: how
 * eth.sendTransaction({from: '', to: '', value: web3.toWei(4, 'ether')})
 * miner.stop()
 * miner.start()
-* web3.eth.getCompilers()
+* eth.getCompilers()
+    * eth.compile
+* txpool.status
+* eth.getBlock('pending', true).transactions
 
 ## 创建私有区块链
 * 进入 `daibi` 文件夹
