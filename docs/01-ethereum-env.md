@@ -53,7 +53,19 @@
 ```
 * 创建创世区块：`geth --datadir "./daibi" init genesis.json`
 * 创建私有链：`geth --datadir "./daibi" --nodiscover console 2>>geth.log`
-    * geth --identity "linoy" --rpc --rpcaddr "localhost" --rpccorsdomain "*" --datadir "./daibi" --port "30303" --nodiscover --rpcapi "personal,db,eth,net,web3,miner" --networkid 1999 console 2>>geth.log
+* 使用 RPC 方式运行：
+```
+geth \
+--identity "linoy" \
+--rpc \
+--rpcaddr "localhost" \
+--rpccorsdomain "*" \
+--datadir "./daibi" \
+--port "30303" \
+--nodiscover \
+--rpcapi "personal,db,eth,net,web3,miner" \
+--networkid 1999 console 2>>geth.log
+```
 * 创建用户：`personal.newAccount("123")`
 * 启动挖矿：`miner.start(1)`
 * 打开另外一个命令行窗口，监视区块链日志：`tail -f geth.log`

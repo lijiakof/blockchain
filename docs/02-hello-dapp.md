@@ -123,10 +123,35 @@ contract MetaCoin {
 * tx.origin 和 msg.sender 的区别？
 * 合约部署到哪儿了？具体以什么形式存在？
 
-## 通过 web3 操作智能合约
+## 看一下效果
+使用 `truffle console` 功能在控制台与合约交互
 
 ```
-eth.getTransaction('0x9bee5005d368a044a9f77ca1722bb456fabd02357a101d387b484efe5571d8e4')
+truffle console
+truffle(development)> var contract;
+truffle(development)> MetaCoin.deployed().then(function(instance){ contract = instance;});
+truffle(development)> contract.getBalance('0x...')
+```
+
+## 通过 web3 操作智能合约
+**注：使用 0.19.0 , 1.0 还没有 release 还有很多问题**
+
+```
+var Web3 = require('web3');
+var web3 = new Web3();
+
+web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+// 合约 ABI 到编译好的合约 json 中找
+var abi = [...]
+// 合约 地址 到编译好的合约 json 中找
+var address = '0x7e0358652b4ee649ebfebc9c4f536c612b784b17';
+
+var account1 = web3.eth.accounts[0];
+// 调用合约方法
+var balance1 = metacoin.getBalance(account1);
+console.log(balance1);
+
 ```
 
 ## 用 go-ethereum 来实现
