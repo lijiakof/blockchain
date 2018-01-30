@@ -10,8 +10,6 @@
 ## 安装 truffle 环境
 * npm install -g truffle
 * npm install -g ethereumjs-testrpc
-	* // npm install -g solc
-	* // npm install -g web3
 
 ## 初始化项目
 * truffle unbox metacoin
@@ -136,6 +134,8 @@ truffle(development)> contract.getBalance('0x...')
 ## 通过 web3 操作智能合约
 **注：使用 0.19.0 , 1.0 还没有 release 还有很多问题**
 
+在 node 中运行如下代码：
+
 ```
 var Web3 = require('web3');
 var web3 = new Web3();
@@ -147,12 +147,18 @@ var abi = [...]
 // 合约 地址 到编译好的合约 json 中找
 var address = '0x7e0358652b4ee649ebfebc9c4f536c612b784b17';
 
+// 通过 ABI 和 地址 获取已部署的合约对象
+var metacoin = web3.eth.contract(abi).at(address);
+
 var account1 = web3.eth.accounts[0];
 // 调用合约方法
 var balance1 = metacoin.getBalance(account1);
 console.log(balance1);
 
 ```
+
+## 将智能合约发布到区块链中
+
 
 ## 用 go-ethereum 来实现
 
