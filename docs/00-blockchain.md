@@ -14,7 +14,7 @@
 * 私有区块链
 * P2P
 * 分布式
-* 密码学
+* Hash
 * 区块
 * 创世区块
 * 工作量证明
@@ -52,8 +52,6 @@
 ### 共识机制 Pow（工作量证明）
 * 激励
 * Hash 计算
-
-https://www.zhihu.com/question/31112808
 
 ## 技术架构
 http://www.8btc.com/ebook-blockchain
