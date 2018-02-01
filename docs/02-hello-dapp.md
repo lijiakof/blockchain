@@ -145,7 +145,7 @@ web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
 // 合约 ABI 到编译好的合约 json 中找
 var abi = [...]
 // 合约 地址 到编译好的合约 json 中找
-var address = '0x7e0358652b4ee649ebfebc9c4f536c612b784b17';
+var address = '0x...';
 
 // 通过 ABI 和 地址 获取已部署的合约对象
 var metacoin = web3.eth.contract(abi).at(address);
@@ -158,6 +158,7 @@ console.log(balance1);
 ```
 
 ## 将智能合约发布到区块链中
+
 
 
 ## 用 go-ethereum 来实现
