@@ -157,28 +157,7 @@ console.log(balance1);
 
 ```
 
-## 将智能合约发布到区块链中
-
-
-
-## 用 go-ethereum 来实现
-
-```
-source = 'contract test { function hello(uint a) returns(uint d) { return a + 1;} }'
-contract = eth.compile.solidity(source).test
-abi = [{ constant: false, inputs: { name: 'a', type: 'uint256' } }]
-MyContract = eth.contract(abi)
-myContract = MyContract.new({from : address, data: contract.code})
- 
-txpool.status
-eth.getBlock('pending', true).transactions
-
-Test = eth.contract(contract.info.abiDefinition)
-myTest = Test.at(myContract.address)
-myTest.hello.call(3)
-
-
-```
-
-
-
+## 将智能合约部署到区块链中
+* 下载以太坊钱包，直接把智能合约源代码粘过去，就可以部署了
+* 通过修改 truffle.config 连接到相应的环境部署
+* 手动部署：https://www.ethereum.org/greeter
