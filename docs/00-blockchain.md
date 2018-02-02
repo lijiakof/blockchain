@@ -54,4 +54,10 @@
 * Hash 计算
 
 ## 技术架构
-http://www.8btc.com/ebook-blockchain
+
+![structure](../resources/images/blockchain-structure.png)
+
+* 应用层：各种数字钱包、交易网站或者各个不同行业的基于区块链搭建的网站或者 App；
+* 业务层：业务层主要还是 Web3 对智能合约的操作，当然也有各个不通应用自己的业务功能模块；
+* 合同层：合同层主要是通过 Solidity 对各个合同的实现；
+* 协议层：主要是通过共识机制、P2P 网络、区块链存储和密码学相关技术，来对区块链底层的实现；
