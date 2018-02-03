@@ -143,6 +143,7 @@ var web3 = new Web3();
 web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
 
 // 合约 ABI 到编译好的合约 json 中找
+// Application Binary Interface
 var abi = [...]
 // 合约 地址 到编译好的合约 json 中找
 var address = '0x...';
