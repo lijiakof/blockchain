@@ -35,18 +35,8 @@
 * 土地所有权记录
 
 ## 问题和风险
-* 区块链和外部世界之间的互动都需要受信任的服务。但是尽管技术上说是可行的，却可能歪曲去中心化系统的目标。
-* 区块链没办法解决风险和回报之间的关联。
-* 
+* 区块链和外部世界之间的互动都需要受信任的服务。但是尽管技术上说是可行的，却可能歪曲去中心化系统的目标；
+* 区块链没办法解决风险和回报之间的关联；
+* 量子计算对区块链的威胁；
 
 ## 未来
-
-http://www.figurefinance.com/news/shownews.php?lang=cn&id=4827
-
-https://www.jianshu.com/p/0caf303e1f4c
-
-https://www.zhihu.com/question/43404157
-
-http://www.sohu.com/a/70172373_286863
-
-http://ethfans.org/posts/101-noob-intro
